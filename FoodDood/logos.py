@@ -1,30 +1,3 @@
-import io
-import os
-# Imports the Google Cloud client library
-from google.cloud import vision
-import google.cloud
-
-def getlogo(file_name):
-
-            # Instantiates a client
-    vision_client = vision.Client("Gozkdsby")
-
-            # The name of the image file to annotate
-
-
-            # Loads the image into memory
-    with io.open(file_name, 'rb') as image_file:
-        content = image_file.read()
-        image = vision_client.image(
-                    content=content)
-
-            # Performs label detection on the image file
-    logos = image.detect_logos()
-
-    # print('Logos:')
-    for logo in logos:
-        return logo.description
-        # print(logo.description)
-            # return logos[0];
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5d72e10e1606e2a92acd7f53ee3c981710bb0f4b4970b3e5b033531f9a72a49
+size 745
